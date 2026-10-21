@@ -1,6 +1,6 @@
-# Dispatch Backend
+# Dispatch Backend (Express)
 
-Small **read-only** proxy that holds Shopify credentials. The Next.js dashboard never stores `SHOPIFY_CLIENT_SECRET` when this is used.
+Small **read-only** Node.js / Express proxy that holds Shopify credentials. The Next.js dashboard never stores `SHOPIFY_CLIENT_SECRET` when this is used.
 
 ```
 Browser → Next.js (Dispatch) → Backend (secrets) → Shopify Admin GraphQL
@@ -22,8 +22,8 @@ Mutations and subscriptions are rejected before any Shopify call.
 cd backend
 cp .env.example .env.local
 # Fill SHOPIFY_* and DISPATCH_API_KEY
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Runs on `http://localhost:8787` by default.
